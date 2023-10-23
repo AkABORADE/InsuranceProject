@@ -1,0 +1,23 @@
+package com.ak.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="drivertable")
+public class Driver {
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private	Integer id;
+	@Column(name="policyId")
+	private	Integer policyId;
+	private	String firstName;
+	private	String lastName;
+	private	String dOB;
+	private	String emailAddress;
+	private	String mobileNumber;
+}

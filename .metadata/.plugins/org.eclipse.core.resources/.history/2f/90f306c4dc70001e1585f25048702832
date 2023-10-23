@@ -1,0 +1,61 @@
+package com.ak.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ak.model.Cource;
+import com.ak.service.CourceService;
+
+@RestController
+@RequestMapping("/cource")
+public class CourceController {
+	@Autowired
+	private CourceService courceService;
+
+//create
+	@PostMapping
+	@ResponseStatus(HttpStatus.CREATED)
+	public Cource saveCource(@RequestBody Cource cource) {
+		return courceService.saveCource(cource);
+
+	}
+
+	// update
+	@PutMapping("/{courceId}")
+	@ResponseStatus(HttpStatus.OK)
+	public Cource updateCourceById(@RequestBody Cource cource, @PathVariable Integer courceId) {
+		return courceService.updateCource(cource, courceId);
+
+	}
+
+//delete
+	@DeleteMapping("/{courceId}")
+	@ResponseStatus(HttpStatus.OK)
+	public void deleteCourceById(Integer courceId) {
+		courceService.deleteCourceById(courceId);
+	}
+	@GetMapping
+	@ResponseStatus(HttpStatus.OK)
+	public List<Cource> getAllCources() {
+		return courceService.getAllCources();
+	}
+
+	// get specific cource
+	@GetMapping("/{courceId}")
+	@ResponseStatus(HttpStatus.OK)
+	public Cource getCourceById(@PathVariable Integer courceId) {
+		return courceService.getCourceById(CourceId);
+	}
+
+}

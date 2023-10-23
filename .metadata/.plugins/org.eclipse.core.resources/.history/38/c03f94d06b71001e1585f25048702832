@@ -1,0 +1,6 @@
+spring.datasource.url=jdbc.mysql://localhost:3306/trafficviolation?useSSL=false
+spring.datasource.username=Pooja
+spring.datasource.password=Pooja@3240
+spring.datasource.driver-class-name=com.mysql.cj.jdbc-driver
+
+

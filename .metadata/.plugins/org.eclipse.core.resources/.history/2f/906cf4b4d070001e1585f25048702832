@@ -1,0 +1,8 @@
+package com.ak.service;
+
+import com.ak.model.Cource;
+
+public interface CourceService {
+
+	public Cource saveCource(Cource cource);
+}

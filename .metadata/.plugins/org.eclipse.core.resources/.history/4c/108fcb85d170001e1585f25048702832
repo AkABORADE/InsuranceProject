@@ -1,0 +1,47 @@
+package com.ak.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ak.model.Cource;
+import com.ak.repository.CourceRepository;
+import com.ak.service.CourceService;
+
+import antlr.collections.List;
+
+@Service
+public class CourceServoiceImpl implements CourceService {
+	@Autowired
+	private CourceRepository courceRepository;
+
+	@Override
+	public Cource saveCource(Cource cource) {
+
+		return courceRepository.save(cource);
+	}
+
+	@Override
+	public Cource updateCource(Cource cource, Integer courceId) {
+		
+		return courceRepository.save(cource);
+	}
+
+	@Override
+	public void deleteCourceById(Integer courceId) {
+		
+		courceRepository.deleteById(courceId);
+	}
+
+	@Override
+	public java.util.List<Cource> getAllCources() {
+		
+		return courceRepository.findAll();
+	}
+
+	@Override
+	public Cource getCourceById(Integer Id) {
+		
+		return courceRepository.getById(Id);
+	}
+
+}

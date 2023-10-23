@@ -1,0 +1,55 @@
+package com.ak.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ak.model.TrafficViolation;
+import com.ak.service.TrafficViolationService;
+
+
+
+@RestController
+@RequestMapping("/trafficvio")
+public class TrafficViolationController {
+	@Autowired
+	private TrafficViolationService service;
+
+	// create
+	@PostMapping
+	public TrafficViolation saveTrafficViolation(@RequestBody TrafficViolation trafficViolation) {
+		return service.saveTrafficViolation(trafficViolation);
+	}
+
+	// get
+	@GetMapping
+	public List<TrafficViolation> getAllTrafficViolations() {
+		return service.getAllTrafficViolations();
+	}
+
+	@GetMapping("/{id}")
+	public TrafficViolation getTraffTrafficViolationByID(@PathVariable("id")  Integer id) {
+		return service.getTraffTrafficViolationByID(id);
+	}
+
+	// update
+	@PutMapping("/{id}")
+	public TrafficViolation updateTrafficViolation(@RequestBody TrafficViolation trafficViolation,
+			@PathVariable Integer id) {
+		return service.updateTrafficViolation(trafficViolation, id);
+	}
+
+	@DeleteMapping("/{id}")
+	public String deleteTrafficViolationById(@PathVariable Integer id) {
+		return service.deleteTrafficViolationById(id);
+	}
+
+}

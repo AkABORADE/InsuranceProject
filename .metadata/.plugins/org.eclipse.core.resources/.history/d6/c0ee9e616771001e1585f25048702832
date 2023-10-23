@@ -1,0 +1,9 @@
+package com.ak.repos;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ak.model.TrafficViolation;
+
+public interface TrafficViolationRepository extends JpaRepository<TrafficViolation, Integer> {
+
+}

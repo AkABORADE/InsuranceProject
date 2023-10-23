@@ -1,0 +1,47 @@
+package com.ak.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ak.model.Driver;
+import com.ak.repos.DriverRepository;
+import com.ak.service.DriverService;
+
+@Service
+public class DriverServiceImpl implements DriverService {
+	@Autowired
+	private DriverRepository driverRepository;
+
+	@Override
+	public Driver saveDriverInfo(Driver driver) {
+
+		return driverRepository.save(driver);
+	}
+
+	@Override
+	public List<Driver> getAllDriversInfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Driver getDriverInfoById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Driver updateDriverInfo(Integer id, Driver driver) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteDriverInfoById(Integer Id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

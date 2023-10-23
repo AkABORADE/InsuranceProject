@@ -1,0 +1,18 @@
+package com.ak.service;
+
+import com.ak.model.Cource;
+
+import antlr.collections.List;
+
+public interface CourceService {
+	//Create
+	public Cource saveCource(Cource cource);
+	//update
+	public Cource updateCource(Cource cource,Integer courceId);
+	//delete
+	public void deleteCourceById(Integer courceId);
+	//get all cource
+	public List getAllCources(); 
+	//get specific cource
+	public Cource getCourceById(Integer Id);
+}

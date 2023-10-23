@@ -1,0 +1,7 @@
+spring.datasource.url=jdbc:mysq://localhost:3306/driverservice
+spring.datasource.username=Pooja
+spring.datasource.password=Pooja@3240
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true

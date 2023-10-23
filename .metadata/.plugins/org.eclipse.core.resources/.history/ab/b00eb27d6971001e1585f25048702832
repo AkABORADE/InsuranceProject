@@ -1,0 +1,40 @@
+package com.ak.service.impl;
+
+import java.util.List;
+
+import com.ak.model.TrafficViolation;
+import com.ak.service.TrafficViolationService;
+
+public class TrafficViolationServiceImpl implements TrafficViolationService {
+
+	@Override
+	public TrafficViolation saveTrafficViolation(TrafficViolation trafficViolation) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<TrafficViolation> getAllTrafficViolations() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TrafficViolation getTraffTrafficViolationByID(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TrafficViolation updateTrafficViolation(TrafficViolation trafficViolation, Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteTrafficViolationById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
